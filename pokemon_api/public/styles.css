@@ -1,0 +1,74 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: white;
+}
+
+.sidebar{
+    height: auto;
+    background-color: rgb(0, 0, 255);
+    text-align: left;
+    color:white;
+    font-family: 'Freehand', cursive;
+    text-align: left;
+    font-size: x-large;
+    /* border-radius: 0 15px 15px 0; */
+}
+
+.title{
+    font-family: 'Freehand', cursive;
+    text-align: center;
+    float: inline-end;
+    padding:0;
+    margin-top: 20px;
+}
+
+.logo{
+    margin-top: 10px;
+    width: 130px;
+    height: 50px;
+}
+
+hr{
+    border-top: white solid 1px;
+}
+
+.searchboxType1{
+    vertical-align: middle;
+    text-align: center;
+    height: 92.5vh;
+    padding-top:200px;
+}
+
+.searchboxType2{
+    vertical-align: middle;
+    text-align: center;
+    height: 92.5vh;
+    padding-top:100px;
+}
+
+.searchbox input{
+    width: 20%;
+}
+
+.dropDownMenu{
+    height:30px;
+}
+
+.pokemonName{
+    font-family: 'Freehand', cursive;
+    text-align: center;
+    float: inline-end;
+    padding:0;
+    margin-bottom: 20px;
+}
+
+.moves{
+    text-align: center;
+    vertical-align: middle;
+}
+
+ul{
+    height: 30%;
+    width: 50%;
+}
