@@ -22,7 +22,15 @@ function Login(props) {
                     },
                     body: JSON.stringify(loginDetails)
                 }).then((response) => response.json())
-                .then((data) => props.validSession(data))
+                .then((data) => {
+                    if(data.type === "Not matched"){
+                        console.log(data);
+                        return;
+                    }else{
+                        console.log(data.type);
+                        props.validSession(data);
+                    }
+                })
             }
         }
     }

@@ -14,7 +14,6 @@ function App() {
   const [newPage, setNewPage] = useState("");
   
   function sessionOn(user) {
-    console.log("here")
     if(localStorage.getItem("username") !== null){
       localStorage.removeItem("username");
       localStorage.setItem("username", JSON.stringify(user.username));

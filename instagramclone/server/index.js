@@ -65,24 +65,25 @@ app.post("/register", (req, res) => {
 app.post("/login", (req, res) => {
     User.findOne({ email: req.body.email})
     .then((user) => {
-      bcrypt.compare(req.body.password, user.password)
-      .then(() => {
-        const userDetails = {
-          id: user._id,
-          username: user.username,
-          email: user.email
-        }
+      bcrypt.compare(req.body.password, user.password, function(err, result) {
+        if(result == true){
+          const userDetails = {
+            id: user._id,
+            username: user.username,
+            email: user.email
+          }
 
-        res.send(userDetails);
-      })
-      .catch((e) => {
-        response.status(400).send({
-          message: "Passwords do not match",
-          e
-        })
+          res.send(userDetails);
+        }else{
+          const errorDetails = {
+            type: "Not matched",
+            message: "Passwords do not match"
+          }
+          res.send(errorDetails);
+        }
       })})
     .catch((e) => {
-      response.status(404).send({
+      res.status(404).send({
         message: "Invalid username or password",
         e
       })
