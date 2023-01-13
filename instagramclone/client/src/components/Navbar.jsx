@@ -33,10 +33,10 @@ function Navbar(props) {
     }
 
     function handlePage(value){
+        console.log(value);
         setPageRedirect(value);
         props.newPage(pageRedirect);
-        console.log(value);
-        console.log(pageRedirect);
+        //console.log(pageRedirect);
     }
 
   return (

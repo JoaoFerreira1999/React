@@ -5,6 +5,7 @@ import Sugestions from "./Sugestions";
 import UserStory from "./UserStory";
 import Register from "./Register";
 import Login from "./Login";
+import Profile from "./Profile";
 
 export{
     Navbar,
@@ -13,6 +14,6 @@ export{
     Sugestions,
     UserStory,
     Register,
-    Login
-
+    Login,
+    Profile,
 }

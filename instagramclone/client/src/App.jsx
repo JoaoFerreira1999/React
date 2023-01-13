@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { Navbar, Stories, Sugestions, Post, Login, Register } from "./components"
+import { Navbar, Stories, Sugestions, Post, Login, Register, Profile } from "./components"
 import "./app.css";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     email: ""
   })
   const [brightnessDn, setBrightnessDn] = useState(false);
-  const [newPage, setNewPage] = useState("");
+  const [newPage, setNewPage] = useState("Home");
   
   function sessionOn(user) {
     if(localStorage.getItem("username") !== null){
@@ -62,6 +62,7 @@ function App() {
 
   function pageLoader(data){
     setNewPage(data);
+    console.log(data + " yes");
   }
 
   function logout(){
@@ -76,11 +77,9 @@ function App() {
         <div className="sticky top-0 z-50">
           <Navbar sessionState={logout} sessionDetails={sessionDetails} dimBright={reduceBrightness} newPage={pageLoader}/>
         </div>
-        {
-          
-        }
         <div className={ brightnessDn === true ? "brightness-50" : null}>
-          <div className="h-screen bg-slate-100 pt-8 relative">
+        {newPage === "Home" &&
+          <div className="h-screen pt-8 relative">
             <div className="flex items-center justify-center">
               <Stories />
             </div>
@@ -89,6 +88,12 @@ function App() {
               <Post/>
             </div>
           </div>
+        }
+        {newPage === "Profile" &&
+          <div className="h-screen pt-8 relative ">
+            <Profile/>
+          </div>
+        }
         </div>
       </div>) : 
       (<div className="flex items-center justify-center h-screen bg-slate-200">
