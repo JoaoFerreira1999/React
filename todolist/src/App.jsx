@@ -1,10 +1,25 @@
-import React from "react";
-import { Navbar } from "./components"
+import React, { useState } from "react";
+import { Navbar, CreateProject, Project } from "./components"
 import "./app.css";
 
 function App() {
 
-  const projectList = [];
+  const [projects, setProjects] = useState([]);
+
+  function addProject(newProject) {
+    console.log(newProject);
+    var newProjects = [];
+    setProjects((prevProjects) => {
+      newProjects = [...prevProjects, newProject];
+      return newProjects;
+    });
+    
+    console.log(newProjects);
+  }
+
+  function deleteProject(project) {
+
+  }
 
   return (
     <div className="flex h-screen w-screen bg-pink-100">
@@ -21,8 +36,19 @@ function App() {
             <button className="m-2"><i class="fa-solid fa-star"></i> Important</button>
             <p className="mt-2 mb-2"></p>
             <hr style={{color: "black"}}></hr>
-            <button className="m-2 mt-3 text-gray-400"><i class="fa-solid fa-plus"></i> Add Project</button>
+            <CreateProject onCreateProject={addProject}/>
             <p></p>
+            {projects.map((projectItem, index) => {
+              console.log(projectItem);
+              return (
+                <Project
+                  name={projectItem}
+                  key={index}
+                  id={index}
+                  onDelete={deleteProject}
+                />
+              );
+            })}
           </div>
           <div className="p-5 w-full bg-white">
             

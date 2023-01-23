@@ -9,7 +9,7 @@ function navbar() {
         <div className='flex-1 w-11/12'>
             <i class="fa-solid fa-magnifying-glass mr-2" style={{color: "white"}}></i>
                 <input type="text" 
-                className="rounded-md bg-red-500 text-white"
+                className="rounded-md bg-red-500 text-white outline-none"
                 placeholder=' Quick Find'
                 onFocus={(event) => {
                     event.target.placeholder = ""
