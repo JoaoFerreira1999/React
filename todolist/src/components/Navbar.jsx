@@ -10,7 +10,7 @@ function Navbar(props) {
     }, [])
 
     function handleClick(event){
-        setNewTaskStatus(event.target.value);
+        setNewTaskStatus(event.currentTarget.title);
         props.newTaskStatus(newTaskStatus)
         console.log(event.target.value);
     }
@@ -47,8 +47,8 @@ function Navbar(props) {
                     second: 'numeric' 
                 })}
             </span>
-            <button onClick={handleClick} value="true"><i class="fa-solid fa-plus mr-2 p-1" style={{color: "white"}}></i></button>
-            <button onClick={handleClick} value="false"><i class="fa-solid fa-xmark mr-2 p-1" style={{color: "white"}}></i></button>
+            <button title={'true'} onClick={handleClick} ><i class="fa-solid fa-plus mr-2 p-1" style={{color: "white"}}></i></button>
+            <button title={'false'} onClick={handleClick} ><i class="fa-solid fa-xmark mr-2 p-1" style={{color: "white"}}></i></button>
         </div>
     </div>
   )

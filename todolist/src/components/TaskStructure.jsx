@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function TaskStructure() {
+function TaskStructure(props) {
     const [task, setTask] = useState({
         title: "",
         content: "",
@@ -14,7 +14,8 @@ function TaskStructure() {
     let year = date.getFullYear();
 
     function handleChange(event){
-        const [name, value] = event.target;
+        const {name, value} = event.target;
+        console.log(name, value);
         
         setTask((prevTask) => {
             return {
@@ -25,31 +26,45 @@ function TaskStructure() {
         })
     }
 
+    function handleClick(){
+        props.newTask(task);
+        console.log(task);
+    }
+
   return (
     <div className=''>
         <form>
-            <input 
-                name="title"
-                placeholder='Title'
-                value={task.title}
-                onChange={handleChange}
-            />
+            <div>
+                <input 
+                    name="title"
+                    placeholder='Title'
+                    className='p-2 rounded-md m-2'
+                    onChange={handleChange}
+                />
+            </div>
 
-            <input 
-                type="date"
-                name="maxDate"
-                onChange={handleChange}
-            />
+            <div>
+                <input 
+                    type="date"
+                    name="maxDate"
+                    className='p-2 rounded-md m-2'
+                    onChange={handleChange}
+                />
+            </div>
 
-            <textarea 
-                name="content" 
-                placeholder='Take a note...'
-                value={task.content}
-                rows="3"
-                onChange={handleChange}
-            />
+            <div>
+                <textarea 
+                        name="content" 
+                        placeholder='Take a note...'
+                        className='p-2 rounded-md m-2'
+                        rows="3"
+                        onChange={handleChange}
+                />
+            </div>
 
-            <button>Add Task</button>
+            <div>
+                <button className='p-2 rounded-md m-2 border-2 bg-red-200 border-red-800' onClick={handleClick}>Add Task</button>
+            </div>
         </form>
     </div>
   )

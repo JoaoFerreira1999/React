@@ -6,7 +6,7 @@ function App() {
 
   const [projects, setProjects] = useState([]);
   const [currentProject, setCurrentProject] = useState("");
-  const [newTask, setNewTask] = useState(false);
+  const [newTask, setNewTask] = useState("false");
 
   function addProject(newProject) {
     console.log(newProject);
@@ -35,7 +35,7 @@ function App() {
   }
 
   return (
-    <div className="flex h-screen w-screen bg-pink-100">
+    <div className="flex h-screen w-screen bg-pink-100 font-montserrat">
       <div className="m-20 h-4/5 w-full rounded-l-md">
         <Navbar newTaskStatus={newTaskHandler}/>
         <div className="flex flex-row rounded-bl-md">
