@@ -6,7 +6,7 @@ function TaskStructure(props) {
         content: "",
         minDate: "",
         maxDate: ""
-    })
+    });
 
     const date = new Date();
     let day = date.getDate();
@@ -26,9 +26,22 @@ function TaskStructure(props) {
         })
     }
 
-    function handleClick(){
-        props.newTask(task);
-        console.log(task);
+    function handleClick(event){
+        if(task.title == "" || task.content == "" || task.maxDate == "")
+        {
+            return ;
+        }
+        else{
+            props.newTask(task);
+            setTask({
+                title: "",
+                content: "",
+                minDate: "",
+                maxDate: ""
+            })
+        }
+        //console.log(task);
+        event.preventDefault();
     }
 
   return (
@@ -38,6 +51,7 @@ function TaskStructure(props) {
                 <input 
                     name="title"
                     placeholder='Title'
+                    value={task.title}
                     className='p-2 rounded-md m-2'
                     onChange={handleChange}
                 />
@@ -47,6 +61,7 @@ function TaskStructure(props) {
                 <input 
                     type="date"
                     name="maxDate"
+                    value={task.maxDate}
                     className='p-2 rounded-md m-2'
                     onChange={handleChange}
                 />
@@ -56,6 +71,7 @@ function TaskStructure(props) {
                 <textarea 
                         name="content" 
                         placeholder='Take a note...'
+                        value={task.content}
                         className='p-2 rounded-md m-2'
                         rows="3"
                         onChange={handleChange}

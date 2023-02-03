@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import TaskStructure from './TaskStructure'
+import Task from './Task'
 
 function ProjectDetails(props) {
 
     const [addProject, setAddProject] = useState(props.addNewTask);
-    
-    var allTasks = [];
+    const [tasks, setTasks] = useState([]);
 
     // switch(props.projectName){
     //     case 'Inbox':
@@ -24,24 +24,24 @@ function ProjectDetails(props) {
     // }
 
     function addNewTask(task) {
-        allTasks.push(task);
+        setTasks((prevTasks) => {
+            return [...prevTasks, task]
+        });
+        console.log(task);
     }
 
   return (
     <div>
-        <div className="grid place-content-start ml-20 mr-20 mt-8">
+        <div className="text-6xl pt-4 pl-4">
+            Task List
+        </div>
+        <div className="grid place-content-start ml-20 mr-20 mt-8 overflow-auto max-h-[546px] max-w-[1100px]">
+        <hr></hr>
         {
-            allTasks.map((item) => {
-                console.log(item);
+            tasks.map((item, index) => {
+                console.log("yes");
                 return (
-                    <div>
-                        <div className='text-6xl mb-6'>
-                            {}
-                        </div>
-                        <div className="p-2">
-                            Content
-                        </div>
-                    </div>
+                    <Task title={item.title} content={item.content} minDate={item.minDate} maxDate={item.maxDate} index={index}/> 
                 );
             })
         }

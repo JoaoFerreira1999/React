@@ -14,6 +14,8 @@ function CreateProject(props) {
   function createProject(event){
     console.log(projectName);
     props.onCreateProject(projectName);
+    document.getElementById('projectName').value = " ";
+    document.getElementById('projectName').placeholder = " Add Project"
     event.preventDefault();
   }
 
@@ -24,7 +26,21 @@ function CreateProject(props) {
         onClick={createProject}>
         <i class="fa-solid fa-plus"></i>
       </button>
-      <input type="text" placeholder="Add Project" className="p-1 m-2 mt-3 bg-inherit" onChange={handleChange}/>
+      <input 
+        type="text" 
+        id="projectName" 
+        placeholder="Add Project" 
+        maxLength="25" 
+        title="25 characters max" 
+        className="p-2 m-2 mt-3 bg-inherit border-2 border-gray-300 rounded-lg" 
+        onChange={handleChange}
+        onFocus={(event) => {
+                    event.target.placeholder = ""
+                }}
+                onBlur={(event) => {
+                    event.target.placeholder = " Add Project"
+                }}
+        />
     </form>
   )
 }

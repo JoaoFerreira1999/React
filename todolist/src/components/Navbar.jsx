@@ -16,7 +16,7 @@ function Navbar(props) {
     }
 
   return (
-    <div className='flex rounded-l-md p-3 bg-red-500 fa-xl'>
+    <div className='flex rounded-t-md p-3 bg-red-500 fa-xl'>
         <div className='p-1 mr-48'>
             <i class="fa-solid fa-pen-to-square" style={{color: "white"}}></i>
         </div>

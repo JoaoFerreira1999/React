@@ -1,10 +1,14 @@
 import React from 'react'
 
 function Project(props) {
-    console.log(props);
+
+    function deleteProject(){
+        props.onDelete(props.id);
+    }
+    
     return (
         <div className="m-2">
-            <i class="fa-solid fa-trash"></i><button className="m-2">{props.name}</button>
+            <button onClick={deleteProject}><i class="fa-solid fa-trash"></i></button><button className="m-2">{props.name}</button>
         </div>
     )
 }

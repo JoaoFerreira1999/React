@@ -30,12 +30,17 @@ function App() {
     console.log(taskStatus);
   }
 
-  function deleteProject(project) {
-    
+  function deleteProject(id) {
+    console.log(id);
+    setProject((prevProjects) => {
+      return prevProjects.filter((item, index) => {
+        return index !== id;
+      });
+    });
   }
 
   return (
-    <div className="flex h-screen w-screen bg-pink-100 font-montserrat">
+    <div className="flex h-screen w-screen bg-pink-100 font-montserrat shadow-xl shadow-black">
       <div className="m-20 h-4/5 w-full rounded-l-md">
         <Navbar newTaskStatus={newTaskHandler}/>
         <div className="flex flex-row rounded-bl-md">
@@ -53,7 +58,7 @@ function App() {
               <CreateProject onCreateProject={addProject}/>
               <p></p>
             </div>
-            <div className="overflow-y-scroll h-[444px] max-h-[444px] p-6 bg-gray-100">
+            <div className="overflow-auto h-[444px] max-h-[444px] max-w-[314px] p-6 bg-gray-100">
                 {projects.map((projectItem, index) => {
                 console.log(projectItem);
                 return (
