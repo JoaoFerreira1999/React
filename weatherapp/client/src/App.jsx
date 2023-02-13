@@ -1,25 +1,36 @@
 import React, { useState } from "react";
 import { Display } from "./components"
 import axios from "axios";
-import env from "react-dotenv";
 
 
 function App() {
 
   const [search, setSearch] = useState("");
+  const [date, setDate] = useState("");
   const [weatherDetails, setWeatherDetails] = useState();
 
-  function handleChange(event) {
+  function handleLocationChange(event) {
     setSearch(event.target.value);
   }
 
+  function handleDateChange(event){
+    setDate(event.target.value);
+    console.log(event.target.value);
+  }
+
   function handleClick(){
-    axios.get("http://api.weatherapi.com/v1/current.json?key=" + env.REACT_APP_API_KEY + "&q=" + search +"&aqi=yes")
-    .then(res => {
-      const weather = res.data;
-      setWeatherDetails(weather);
-      console.log(weather);
-    })
+    if(search !== ""){
+      axios.post("http://localhost:3000/search", {
+        location: search,
+        date: date
+      })
+      .then((response) => {
+        console.log(JSON.stringify(response) );
+      })
+      .catch((err) => {
+        console.error(err);
+      })
+    }
   }
 
 
@@ -28,7 +39,8 @@ function App() {
       <div>
         <input type="text" 
           class="rounded pr-1 pl-1 w inputSearch shadow" 
-          onChange={handleChange}></input>
+          onChange={handleLocationChange}></input>
+        <input type="date" onChange={handleDateChange}/> 
         <button onClick={handleClick}></button>
       </div>
       <Display weatherInfo={weatherDetails}/>
