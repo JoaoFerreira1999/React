@@ -1,0 +1,21 @@
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: auto;
+}
+
+.navbar button{
+    background-color: red;
+    padding: 7px 17px;
+    border-radius: 5px;
+}
+
+.navbar-container{
+    
+}
+
+.logo{
+    height: 80px;
+
+}

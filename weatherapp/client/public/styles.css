@@ -1,4 +1,8 @@
-body{
-    background-image: linear-gradient(to right, rgba(226, 180, 120), rgb(255, 255, 255));
-    height: 100%;
+body {
+  background-image: linear-gradient(
+    to top right,
+    rgb(221, 213, 142),
+    rgb(11, 26, 77)
+  );
+  height: 100%;
 }

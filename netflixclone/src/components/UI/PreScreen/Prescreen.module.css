@@ -1,0 +1,38 @@
+body{
+    color:white;
+    background-color: gray;
+}
+
+.main{
+    background-image: url('../../../assets/wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height:850px;
+    margin-bottom: 5px;
+}
+
+.info{
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main button {
+    background-color: red;
+    color:white;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.info-card {
+    padding: 70px 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

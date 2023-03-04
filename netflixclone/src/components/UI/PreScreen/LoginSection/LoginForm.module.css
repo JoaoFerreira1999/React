@@ -1,0 +1,34 @@
+.main-div{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.input-div{
+    width:74%;
+}
+
+.input{
+    width:100%;
+    height:100%;
+}
+
+.input:focus {
+    outline:none;
+}
+
+.button-div{
+    width:25%;
+    margin-left: 3px;
+}
+
+.submit-button{
+    width:100%;
+    height:106%;
+    font-size: x-large;
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    height: 60px;
+    min-width: min-content;
+}

@@ -1,29 +1,28 @@
 image {
-    max-width:100%;
-    max-height:100%;
-    display: block;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
 }
 
 .subDiv {
-    height: 100%;
-    width: 100%;
-    background-image: url("./images/background.jpg");
-    background-size: auto;
-    background-repeat: no-repeat;
-    filter: grayscale(60%);
-    color: white;
-    padding: 3%;
+  height: 100%;
+  width: 100%;
 }
 
 .navbarParent {
-    background-color: #21201e;
-    height: 85%;
-    width: 67%;
-    max-width:100%;
-    max-height:100%;
-    margin-top: 2%;
+  height: 85%;
+  width: 67%;
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 2%;
 }
 
 .inputSearch {
-    width: 200px;
+  width: 400px;
+}
+
+.containerDiv {
+  background-color: rgb(240, 248, 222);
+  border-radius: 20px;
+  padding: 50px;
 }
