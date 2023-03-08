@@ -3,16 +3,15 @@ import classes from './LoginForm.module.css'
 
 function LoginForm() {
   return (
-    <div className={classes['main-div']}>
-        <form>
-            <div className={classes.form}>
+    <div>
+        <form className={classes.form}>
                 <div className={classes['input-div']}>
-                    <input type="text" placeholder='Email Address' className={classes.input}/>
+                    <label for="email">Email Address</label>
+                    <input type="text" id="email"/>
+                    <div className={classes['submit-button-div']}>
+                        <button type="submit" className={classes['submit-button']}>Get Started ></button>
+                    </div> 
                 </div>
-                <div className={classes['button-div']}>
-                    <button type="submit" className={classes['submit-button']}>Get Started ></button>
-                </div>
-            </div>
         </form>
     </div>
   )

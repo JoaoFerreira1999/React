@@ -7,12 +7,20 @@
 
 .navbar button{
     background-color: red;
-    padding: 7px 17px;
+    padding: 10px 17px;
     border-radius: 5px;
+    font-size: medium;
 }
 
 .navbar-container{
-    
+    padding: 30px 30px 0 30px;
+}
+
+select{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-right: 20px;
 }
 
 .logo{

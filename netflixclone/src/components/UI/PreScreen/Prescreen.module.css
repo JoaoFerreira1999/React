@@ -1,18 +1,21 @@
 body{
     color:white;
-    background-color: gray;
+    background-color: #222222;
 }
 
 .main{
-    background-image: url('../../../assets/wallpaper.jpg');
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 0, 0.6)
+      ),url('../../../assets/wallpaper.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height:850px;
+    height:750px;
     margin-bottom: 5px;
 }
 
-.info{
+.main-info{
     margin-top: 100px;
     display: flex;
     flex-wrap: wrap;
@@ -30,9 +33,17 @@ button:hover{
     cursor: pointer;
 }
 
-.info-card {
-    padding: 70px 45px;
+.main-info-card {
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.info-detail-card{
+    position: relative;
+    background-color: black;
+    margin: 8px 0 10px 0;
+    height: 480px;
+    display: flex;
     justify-content: center;
 }
