@@ -1,0 +1,43 @@
+.wrapper{
+    height: 100%;
+    width: 70%;
+}
+
+.title-div{
+    width: 100%;
+    text-align: center;
+
+}
+
+.list-div{
+    padding: 3%;
+    height: 75%;
+}
+
+ul{
+    list-style-type: none;
+    height: 100%;
+}
+
+li{
+    height: 15%;
+    margin-bottom: 1%;
+}
+
+li > button {
+    background-color: rgb(44, 44, 44);
+    color:white;
+    text-align: left;
+    padding-left: 4%;
+    height: 100%;
+    width: 100%;
+    font-size: x-large;
+}
+
+ul:hover{
+    cursor: pointer;
+}
+
+.desc-span{
+    display: none;
+}

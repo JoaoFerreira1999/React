@@ -3,13 +3,15 @@ const infoSectionItems = [{
         id: 1,
         title: "Enjoy on your TV.",
         description: "Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.",
-        imgURL: "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+        imgURL: "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png",
+        videoURL: "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
     },
     {
         id: 2,
         title: "Watch everywhere.",
         description: "Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.",
-        imgURL: "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png"
+        imgURL: "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png",
+        videoURL: "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v"
     },
 ]
 

@@ -1,14 +1,17 @@
+h1{
+    font-size: 3.4rem;
+    padding: 2%;
+}
+
+h2{
+    font-weight: 500;
+}
+
 .img-div{
     padding: 10px;
     margin: 2% 25% 2% 0;
-    width:30%;
-}
-
-.desc-div{
-    padding: 10px;
-    margin: auto 0 auto 20%;
-    max-width: 27%;
-    text-align: left;
+    width: 50%;
+    display: flex;
 }
 
 .img-div > img{
@@ -16,6 +19,31 @@
     height: 100%;
 }
 
-.video-div{
+.video-div1{
     position: absolute;
+    top: 27%;
+    left: 50%;
+    z-index: -1;
+}
+
+.video-div1 > video {
+    width: 82%;
+}
+
+.desc-div{
+    margin: auto 0 auto 20%;
+    max-width: 27%;
+    text-align: left;
+    font-size: large;
+}
+
+.video-div2{
+    position: absolute;
+    top: 19%;
+    left: 52%;
+    z-index: -1;
+}
+
+.video-div2 > video {
+    width: 67%;
 }

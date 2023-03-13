@@ -18,18 +18,18 @@ function PreScreen() {
           </div>
       </div>
       <div className={classes['info-detail-card']}>
-        <InfoBlueprint key={infoSectionItems[0].id} description={infoSectionItems[0].description} title={infoSectionItems[0].title} imgURL={infoSectionItems[0].imgURL}/>
+        <InfoBlueprint key={infoSectionItems[0].id} description={infoSectionItems[0].description} title={infoSectionItems[0].title} imgURL={infoSectionItems[0].imgURL} videoURL={infoSectionItems[0].videoURL}/>
       </div>
       <div className={classes['info-detail-card']}>
-        <InfoBlueprintReverse key={infoSectionItems[0].id} description={infoSectionItems[0].description} title={infoSectionItems[0].title} imgURL={infoSectionItems[0].imgURL}/>
+        <InfoBlueprintReverse key={infoSectionItemsReversed[0].id} description={infoSectionItemsReversed[0].description} title={infoSectionItemsReversed[0].title} imgURL={infoSectionItemsReversed[0].imgURL}/>
       </div>
       <div className={classes['info-detail-card']}>
-        <InfoBlueprint key={infoSectionItems[1].id} description={infoSectionItems[1].description} title={infoSectionItems[1].title} imgURL={infoSectionItems[1].imgURL}/>
+        <InfoBlueprint key={infoSectionItems[1].id} description={infoSectionItems[1].description} title={infoSectionItems[1].title} imgURL={infoSectionItems[1].imgURL} videoURL={infoSectionItems[1].videoURL}/>
       </div>
       <div className={classes['info-detail-card']}>
-        <InfoBlueprintReverse key={infoSectionItems[1].id} description={infoSectionItems[1].description} title={infoSectionItems[1].title} imgURL={infoSectionItems[1].imgURL}/>
+        <InfoBlueprintReverse key={infoSectionItemsReversed[1].id} description={infoSectionItemsReversed[1].description} title={infoSectionItemsReversed[1].title} imgURL={infoSectionItemsReversed[1].imgURL}/>
       </div>
-      <div className={classes['info-detail-card']}>
+      <div className={classes['freq-asked-card']}>
         <FreqAsked />
       </div>
     </Fragment>

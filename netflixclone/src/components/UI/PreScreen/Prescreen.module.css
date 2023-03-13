@@ -43,7 +43,17 @@ button:hover{
     position: relative;
     background-color: black;
     margin: 8px 0 10px 0;
-    height: 480px;
+    height: 490px;
     display: flex;
     justify-content: center;
+    z-index: -2;
+}
+
+.freq-asked-card{
+    background-color: black;
+    margin: 8px 0 0 0;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    padding: 2%;
 }

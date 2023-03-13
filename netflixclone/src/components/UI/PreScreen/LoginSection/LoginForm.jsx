@@ -9,7 +9,7 @@ function LoginForm() {
                     <label for="email">Email Address</label>
                     <input type="text" id="email"/>
                     <div className={classes['submit-button-div']}>
-                        <button type="submit" className={classes['submit-button']}>Get Started ></button>
+                        <button type="submit" className={classes['submit-button']}>Get Started <i class="fa-solid fa-chevron-right fa-l"></i></button>
                     </div> 
                 </div>
         </form>

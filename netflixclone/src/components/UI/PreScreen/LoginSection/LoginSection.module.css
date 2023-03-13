@@ -1,9 +1,5 @@
 body, html {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    direction: ltr;
     font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
-    font-size: 16px;
 }
 
 .center-div{
@@ -17,9 +13,8 @@ body, html {
     padding:10px;
 }
 
-h1{
+.h1{
     font-size: 4rem;
-    font-weight: bold;
     max-width: 700px;
     line-height: 120%;
 }
