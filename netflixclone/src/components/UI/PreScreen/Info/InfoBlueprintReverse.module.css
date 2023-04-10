@@ -4,8 +4,10 @@
 
 .img-div{
     padding: 10px;
-    margin: 2% 0% 2% 15%;
+    margin: 1% 15% 1% 0;
+    left: 12%;
     display: flex;
+    position: absolute;
 }
 
 .img-div > img{
@@ -14,8 +16,24 @@
 
 .desc-div{
     padding: 10px;
-    margin: auto 20% auto 0;
+    margin: auto 0 auto 30%;
     max-width: 35%;
     text-align: left;
+}
+
+@media (max-width: 480px) {
+    .img-div{
+        margin: 2% 0 2% 0;
+        left: 0;
+        display: block;
+        position: relative;
+        text-align: center;
+    }
+
+    .desc-div{
+        max-width: 100%;
+        text-align: center;
+        margin: 3% 0 3% 0;
+    }
 }
 

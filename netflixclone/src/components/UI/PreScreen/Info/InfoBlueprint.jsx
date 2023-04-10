@@ -13,7 +13,7 @@ function InfoBlueprint(props) {
         {
           props.videoURL === "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v" &&
                 <div className={classes['video-div1']}>
-                    <video autoplay muted playsInline>
+                    <video autoplay muted autoPlay>
                       <source src={props.videoURL} type="video/mp4" />
                     </video>
                   </div>
@@ -21,7 +21,7 @@ function InfoBlueprint(props) {
         {
           props.videoURL === "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" &&
                 <div className={classes['video-div2']}>
-                    <video autoplay muted playsInline>
+                    <video autoplay muted autoPlay>
                       <source src={props.videoURL} type="video/mp4" />
                     </video>
                   </div>

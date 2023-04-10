@@ -33,6 +33,7 @@ li > button {
     width: 100%;
     font-size: x-large;
     display: flex;
+    border-style: none;
 }
 
 li > button:active {
@@ -49,12 +50,33 @@ li > button:not(hover) {
     transition: background 0.5s ease-in-out;
 }
 
+.description {
+    width: 80%;
+}
+
 ul:hover{
     cursor: pointer;
 }
 
+.desc-div{
+    display: flex;
+    justify-content: center;
+}
+
 .desc-span{
     display: none;
+    font-size: larger;
+    margin: 2% 0 2% 0;
+    padding: 3% 2% 3% 2%;
+    background-color: rgb(110, 110, 110);
+}
+
+.desc-div:hover{
+    cursor: pointer;
+}
+
+.desc-span > p {
+    padding: 10px 0 10px 0;
 }
 
 .question-div{
@@ -62,7 +84,61 @@ ul:hover{
     flex: 0 0 95%;
 }
 
-.plus-Icon{
-    float: right;
-    flex: 1;
+.form{
+    margin: 2% 10% 2% 10%;
+    padding-bottom: 5%;
+    height: 50px;
+    text-align: center;
+}
+
+.form > p {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.form > input[type="text"] {
+    border-radius: 5px;
+    background-color: rgb(12, 11, 11);
+    color: white;
+    margin: 5px 1% 0 0 ;
+    width: 35%;
+    border-style: solid;
+    border-width: thin;
+}
+
+.form > input[type="submit"] {
+    background-color: red;
+    color: white;
+    height: 50px;
+    width: 200px;
+    border-radius: 5px;
+    border-style: none;
+    font-size: large;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+
+@media (max-width: 480px) {
+    .question-div{
+        font-size: medium;
+        margin-top: 20px;
+    }
+
+    .wrapper{
+        width: 90%;
+    }
+
+    li{
+        height: 70px;
+    }
+
+    .plus-icon{
+        position: relative;
+        top: 25%;
+        right: 6%;
+    }
+
 }

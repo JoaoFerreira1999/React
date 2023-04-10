@@ -4,6 +4,10 @@ import classes from './InfoBlueprintReverse.module.css'
 function InfoBlueprintReverse(props) {
   return (
     <Fragment>
+      <div className={classes['desc-div']}>
+        <h1>{props.title}</h1>
+        <h2>{props.description}</h2>
+      </div>
       <div className={classes['img-div']}>
         <img src={props.imgURL} alt=""/>
         {
@@ -22,10 +26,6 @@ function InfoBlueprintReverse(props) {
                     </video>
                   </div>
         }
-      </div>
-      <div className={classes['desc-div']}>
-        <h1>{props.title}</h1>
-        <h2>{props.description}</h2>
       </div>
     </Fragment>
   )

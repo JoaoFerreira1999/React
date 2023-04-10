@@ -111,70 +111,90 @@ function FreqAsked() {
 
         {/* Item 1 */}
           <li>
-            <button>
+            <button id="1" onClick={handleClick}>
               <div id="1" onClick={handleClick} className={classes['question-div']}>What is Netflix?</div>
-              <div>
-                <span className={classes['plus-icon']}><i class="fa-solid fa-plus"></i></span>
+              <div className={classes['plus-icon']}>
+                <span><i class="fa-solid fa-plus"></i></span>
               </div>
             </button>
           </li>
-          <span id="desc1" className={classes['desc-span']}>des1</span>
+          <span id="desc1" className={classes['desc-span']}>
+            Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.<p></p>
+            You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!
+          </span>
 
         {/* Item 2 */}
           <li>
-            <button id="2">
+            <button id="2" onClick={handleClick}>
               <div id="2" onClick={handleClick} className={classes['question-div']}>How much does Netflix cost?</div>
-              <div>
-                <span className={classes['plus-icon']}><i class="fa-solid fa-plus"></i></span>
+              <div className={classes['plus-icon']}>
+                <span><i class="fa-solid fa-plus"></i></span>
               </div>
             </button>
           </li>
-          <span id="desc2" className={classes['desc-span']}>des2</span>
+          <span id="desc2" className={classes['desc-span']}>
+          Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from EUR7.99 to EUR15.99 a month. No extra costs, no contracts.
+          </span>
 
         {/* Item 3 */}
           <li>
-            <button id="3">
+            <button id="3" onClick={handleClick}>
               <div id="3" onClick={handleClick} className={classes['question-div']}>Where can I watch?</div>
-              <div>
-                <span className={classes['plus-icon']}><i class="fa-solid fa-plus"></i></span>
+              <div className={classes['plus-icon']}>
+                <span><i class="fa-solid fa-plus"></i></span>
               </div>
             </button>
           </li>
-          <span id="desc3" className={classes['desc-span']}>des3</span>
+          <span id="desc3" className={classes['desc-span']}>
+            Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.<p></p>
+            You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.
+          </span>
 
         {/* Item 4 */}
           <li>
-            <button id="4">
+            <button id="4" onClick={handleClick}>
               <div id="4" onClick={handleClick} className={classes['question-div']}>How do I cancel?</div>
-              <div>
-                <span className={classes['plus-icon']}><i class="fa-solid fa-plus"></i></span>
+              <div className={classes['plus-icon']}>
+                <span><i class="fa-solid fa-plus"></i></span>
               </div>
             </button>
           </li>
-          <span id="desc4" className={classes['desc-span']}>des4</span>
+          <span id="desc4" className={classes['desc-span']}>
+            Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.
+          </span>
 
         {/* Item 5 */}
           <li>
-            <button id="5">
+            <button id="5" onClick={handleClick}>
               <div id="5" onClick={handleClick} className={classes['question-div']}>What can I watch on Netflix?</div>
-              <div>
-                <span className={classes['plus-icon']}><i class="fa-solid fa-plus"></i></span>
+              <div className={classes['plus-icon']}>
+                <span><i class="fa-solid fa-plus"></i></span>
               </div>
             </button>
           </li>
-          <span id="desc5" className={classes['desc-span']}>des5</span>
+          <span id="desc5" className={classes['desc-span']}>
+            Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
+          </span>
 
         {/* Item 6 */}
           <li>
-            <button>
+            <button id="6" onClick={handleClick}>
               <div id="6" onClick={handleClick} className={classes['question-div']}>Is Netflix good for kids?</div>
-              <div>
-                <span className={classes['plus-icon']}><i class="fa-solid fa-plus"></i></span>
+              <div className={classes['plus-icon']}>
+                <span><i class="fa-solid fa-plus"></i></span>
               </div>
             </button>
           </li>
-          <span id="desc6" className={classes['desc-span']}>des6</span>
+          <span id="desc6" className={classes['desc-span']}>
+            The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.<p></p>
+            Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.
+          </span>
         </ul>
+      </div>
+      <div className={classes.form}>
+          <p>Ready to watch? Enter your email to create or restart your membership.</p>
+          <input placeholder="Email address" type="text" />
+          <input type="submit" value='Get Started'/>
       </div>
     </div>
   )

@@ -5,17 +5,23 @@
     position: relative;
 }
 
-label{
+/* label{
     position: absolute;
     padding: 20px 0 0 10px;
     color: gray;
-}
+} */
 
 input{
     width: 70%;
     height: 100%;
     box-sizing: border-box;
+    background: transparent;
     padding-left: 12px;
+    border-radius: 5px 0 0 5px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    color: white;
 }
 
 input:focus {
@@ -41,11 +47,30 @@ input:valid + label{
 
 .submit-button {
     height:100%;
-    width: 100%;
+    width: 30%;
     font-size: 180%;
     border: none;
+    border-radius: 0 5px 5px 0;
 }
 
 .form{
     height: 60px;
+}
+
+@media (max-width: 480px) {
+    .input-div{
+        display: block;
+    }
+
+    input{
+        height: 50px;
+    }
+
+    .submit-button{
+        width: 40%;
+        height: 75%;
+        margin-top: 15px;
+        border-radius: 5px;
+        font-size: medium;
+    }
 }

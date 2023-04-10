@@ -47,3 +47,35 @@ h2{
 .video-div2 > video {
     width: 67%;
 }
+
+@media (max-width: 480px) {
+    h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .desc-div{
+        max-width: 100%;
+        margin: auto 15px auto 15px;
+        text-align: center;
+    }
+
+    .img-div{
+        width: 95%;
+    }
+
+    .video-div1{
+        position: absolute;
+        top: 49%;
+        left: 15%;
+        z-index: -1;
+    }
+
+    .video-div2{
+        position: absolute;
+        top: 47%;
+        left: 25%;
+        z-index: -1;
+    }
+
+}
