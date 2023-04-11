@@ -128,11 +128,12 @@ input[type="submit"]:hover {
     }
 
     .wrapper{
-        width: 90%;
+        width: 95%;
     }
 
     li{
         height: 70px;
+        margin-bottom: 10px;
     }
 
     .plus-icon{
@@ -141,4 +142,23 @@ input[type="submit"]:hover {
         right: 6%;
     }
 
+    .form{
+        margin: 2% 4% 2% 4%;
+    }
+
+    .form > p {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .form > input[type="text"] {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+    .form > input[type="submit"] {
+        width: 60%;
+        text-align: center;
+        padding-right: 15px;
+    }
 }

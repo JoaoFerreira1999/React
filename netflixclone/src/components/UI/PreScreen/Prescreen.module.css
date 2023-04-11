@@ -67,4 +67,8 @@ button:hover{
         display: block;
         height: auto;
     }
+
+    .freq-asked-card{
+        height: 800px;
+    }
 }
