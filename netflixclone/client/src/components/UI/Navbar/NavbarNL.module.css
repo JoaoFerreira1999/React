@@ -1,16 +1,36 @@
 .navbar{
     display:flex;
     justify-content: space-between;
-    align-items: flex-start;
-    height: auto;
 }
 
-.navbar button{
+/* .navbar button{
     background-color: red;
     padding: 10px 17px;
     border-radius: 5px;
     font-size: medium;
     border-style: none;
+} */
+
+button:hover{
+        filter: brightness(90%);
+}
+
+.link{
+    background-color: red;
+    padding: 7px 17px 12px 17px;
+    border-radius: 5px;
+    font-size: medium;
+    border-style: none;
+    color: white;
+}
+
+.link:hover{
+    text-decoration: none;
+    filter: brightness(90%);
+}
+
+.sub-div{
+    text-align: center;
 }
 
 .navbar-container{
