@@ -9,7 +9,7 @@ import "./root.css";
 function RootLayout() {
   const location = useLocation().pathname;
 
-  let searchArea;;
+  let searchArea;
 
   if(location === '/'){
     searchArea = <SearchArea />
