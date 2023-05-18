@@ -1,6 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
 import searchReducer from './searchSlice'
+import  statusReducer from './statusSlice'
 
 export const store = configureStore({
-    reducer: {searchReducer}
+    reducer: {
+        search: searchReducer,
+        status: statusReducer
+    }
 });

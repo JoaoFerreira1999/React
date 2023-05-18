@@ -15,11 +15,11 @@ const api_key = process.env.API_KEY;
 app.post('/summoner', (req, res) => {
     const name = req.body.summonerName;
     const region = req.body.region;
-    console.log(name, region);
+    //console.log(name, region);
 
     axios.get("https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/" + name + "?api_key=" + api_key)
     .then(function (response) {
-        console.log(response.data);
+        //console.log(response.data);
         const puuid = response.data.puuid;
         const id = response.data.id;
         const accountId = response.data.accountId;
@@ -28,7 +28,7 @@ app.post('/summoner', (req, res) => {
 
         axios.get("https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/" + id + "?api_key=" + api_key)
         .then(function (response) {
-            console.log(response.data);
+            //console.log(response.data);
             const soloQueueData = response.data[0];
             const rankedFlexData = response.data[1];
 
@@ -59,7 +59,6 @@ app.post('/summoner', (req, res) => {
         })
         .catch(function (err){
             console.log(err);
-            res.send(err);
         })
         .finally(function (){
 
@@ -67,7 +66,6 @@ app.post('/summoner', (req, res) => {
 
     })
     .catch(function (err){
-        res.send(err);
         console.log(err);
     })
     .finally(function () {

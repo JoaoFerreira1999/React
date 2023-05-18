@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { addSearchDetails } from '../store/searchSlice'; 
+import { addSearchDetails} from '../store/searchSlice'; 
+import { dataIsSet } from '../store/statusSlice'; 
 
 function importAll(r) {
     let images = {};
@@ -10,7 +11,47 @@ function importAll(r) {
   
   const images = importAll(require.context('../assets/regions', false, /\.(png|jpe?g|svg)$/));
 
+  const regions = [
+    {
+        region: 'North America',
+        imgURL: images['NorthAmerica.png']
+    }, 
+    {
+        region: 'Europe West',
+        imgURL: images['EuropeWest.png']
+    }, 
+    {
+        region: 'Europe Nordic & East',
+        imgURL: images['NorthAmerica.png']
+    }, 
+    {
+        region: 'Oceania',
+        imgURL: images['Oceania.png']
+    }, 
+    {
+        region: 'Korea',
+        imgURL: images['Korea.png']
+    }, 
+    {
+        region: 'Japan',
+        imgURL: images['Japan.png']
+    }, 
+    {
+        region: 'Brazil',
+        imgURL: images['Brazil.png']
+    }];
+
+
 function SearchArea() {
+
+    const dispatch = useDispatch();
+    const userDetails = useSelector((state) => state.search.dataFields);
+    const dataStatus = useSelector((state) => state.status.status);
+
+    useEffect(() => {
+        console.log(userDetails);
+        console.log(dataStatus);
+    });
 
     const [summonerName, setSummonerName] = useState("");
 
@@ -21,11 +62,11 @@ function SearchArea() {
         summonerName: summonerName
     }
 
-    useEffect(() =>{
+/*     useEffect(() =>{
         console.log(summonerName);
         console.log(region);
     },[summonerName,region]);
-
+ */
     async function handleSubmit(e){
         e.preventDefault();
         if(summonerName !== " " && region !== " "){
@@ -38,40 +79,18 @@ function SearchArea() {
             });
             const data = await response.json();
             console.log(data);
+            if(data.length === 0){
+                console.log("Response is empty");
+            } else {
+                dispatch(addSearchDetails(data));
+                dispatch(dataIsSet());
+            }
         }
     }
 
-    const regions = [
-        {
-            region: 'North America',
-            imgURL: images['NorthAmerica.png']
-        }, 
-        {
-            region: 'Europe West',
-            imgURL: images['EuropeWest.png']
-        }, 
-        {
-            region: 'Europe Nordic & East',
-            imgURL: images['NorthAmerica.png']
-        }, 
-        {
-            region: 'Oceania',
-            imgURL: images['Oceania.png']
-        }, 
-        {
-            region: 'Korea',
-            imgURL: images['Korea.png']
-        }, 
-        {
-            region: 'Japan',
-            imgURL: images['Japan.png']
-        }, 
-        {
-            region: 'Brazil',
-            imgURL: images['Brazil.png']
-        }];
-
-  return (
+  return ( 
+    <Fragment>
+    { !dataStatus ? 
     <>
         <img src="https://opgg-static.akamaized.net/logo/20230421033010.53fba1927ccf4f92ac534310f318b6f9.png?image=q_auto,f_webp,w_auto&v=1682831347614" alt="logo" className='h-[13rem] rounded-full mb-10 mt-36'/>
         <form className='flex bg-gray p-5 pt-2 pb-2 rounded-full'>
@@ -92,7 +111,12 @@ function SearchArea() {
             <button className='border-black border-l-2 text-slate-400 pr-4 pl-4' onClick={handleSubmit}>Search</button>
         </form>
     </>
-  )
+    :
+        <div>
+            yes
+        </div>
+    }
+    </Fragment>
+    )
 }
-
 export default SearchArea

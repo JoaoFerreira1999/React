@@ -1,16 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = [];
+const initialState = {
+    dataFields: []
+}
 
 export const searchSlice = createSlice({
     name: 'search',
     initialState,
     reducers: {
         addSearchDetails: (state, action) => {
-            state.value = action.payload;
+            state.dataFields.push(action.payload);
         }
     }
 });
+
 
 export const { addSearchDetails } = searchSlice.actions;
 
