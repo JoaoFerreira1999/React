@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
+    fontFamily: {
+      
+    },
     extend: {
       colors:{
         'gray': '#31313C',

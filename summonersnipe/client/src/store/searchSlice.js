@@ -10,7 +10,7 @@ export const searchSlice = createSlice({
     reducers: {
         addSearchDetails: (state, action) => {
             state.dataFields.push(action.payload);
-        }
+        },
     }
 });
 
