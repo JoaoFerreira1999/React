@@ -1,0 +1,16 @@
+.wrapper{
+    height: 40vh;
+    width: 80vw;
+    margin: 0 auto;
+    background-color: rgb(255, 251, 245);
+}
+
+.main{
+    margin: auto;
+    width: 40%;
+}
+
+.slogan{
+    font-family: 'Kalam', cursive;
+
+}

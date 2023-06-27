@@ -7,7 +7,6 @@ function Home() {
     <div class={classes.wrapper}>
       <main class={classes.main}>
         <h1>Grab Up To 50% Off On The Selected SunGlasses</h1>
-        <
       </main>
     </div>
   )

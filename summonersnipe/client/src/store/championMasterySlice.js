@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 const initialState = {
     champions: []
 };
@@ -10,10 +9,12 @@ export const championMasterySlice = createSlice({
     initialState,
     reducers: {
         addChampions: (state, action) => {
-            state.champions = action.payload;
-        }
+            if (state.champions.length === 0) {
+                state.champions.push(action.payload);   
+            }
+        },
     }
-})
+});
 
 export const { addChampions } = championMasterySlice.actions;
 

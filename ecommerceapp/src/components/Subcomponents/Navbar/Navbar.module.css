@@ -1,0 +1,73 @@
+.navbar{
+    display: flex;
+    padding: 5px;
+    margin: 10px 500px 20px 500px;
+    align-items: center;
+    justify-content: space-evenly;
+    min-width: auto;
+    border-bottom: solid;
+    flex-wrap: wrap;
+}
+
+.navbar > div a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar > div a:hover{
+    color:cadetblue;
+    text-decoration: underline;
+}
+
+.navbar form > input[type="text"]{
+    padding: 10px;
+    width: 300px;
+    background-color: rgb(245, 245, 245);
+    border: none;
+    border-radius: 25px;
+
+} 
+
+.navbar form > input[type="text"]:focus{
+    outline: none;
+}
+
+.navbar form > select{
+    padding: 10px;
+    background-color: rgb(245, 245, 245);
+    border: none;
+    border-radius: 5px;
+    width: 80px;
+    min-width: 80px;
+    margin-left: 5px;
+    color: black;
+}
+
+.navbar form > select > option{
+    color:black;
+}
+
+.logo{
+    height: 100px;
+    position: absolute;
+    margin: 10px;
+}
+
+.rotate{
+    animation: rotation 2s infinite linear;
+}
+
+.brands {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-align: center;
+  }
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }

@@ -64,17 +64,21 @@ app.post('/summoner', (req, res) => {
 
                 axios.get("https://europe.api.riotgames.com/lol/match/v5/matches/by-puuid/" + puuid +"/ids?start=0&count=20&api_key=" + api_key)
                 .then(function (response) {
-                    axios.get("https://europe.api.riotgames.com/lol/match/v5/matches/EUW1_6415482931?api_key=" + api_key)
-                    .then(function (response){
-                        summonerDetails.push({
-                            matchHistory: response.data
-                        });
-                        console.log(summonerDetails);
-                        res.send(summonerDetails);
-                    })
-                    .catch(function (err){
-                        console.log(err);
-                    })
+                    //console.log(response.data);
+
+                    summonerDetails.push({
+                        matchHistory: response.data
+                    });
+
+                    res.send(summonerDetails);
+
+                    // axios.get("https://europe.api.riotgames.com/lol/match/v5/matches/EUW1_6415482931?api_key=" + api_key)
+                    // .then(function (response){
+                    //     //console.log(summonerDetails);
+                    // })
+                    // .catch(function (err){
+                    //     console.log(err);
+                    // })
                 })
                 .catch(function (err){
                     console.log(err);
@@ -96,11 +100,19 @@ app.post('/championmastery', function (req, res){
 
     axios.get("https://" + regionTag + ".api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/" + id + "?api_key=" + api_key)
     .then(function (response) {
-        console.log(response.data);
+        //console.log(response.data);
+        const top3 = [];
+
+        for(var i = 0; i <= 2; i++) {
+            //console.log(response.data[i]);
+            top3.push(response.data[i]);
+        }
+        
         const championDetails = [];
 
         championDetails.push({
-            champions: response.data
+            champions: response.data,
+            topChampions: top3
         });
         res.send(championDetails);
     })
@@ -108,6 +120,11 @@ app.post('/championmastery', function (req, res){
         console.error(err);
     })
 })
+
+app.post('/matchhistory', function (req, res) {
+    const matchIds = req.body.matchHistory;
+    console.log(matchIds);
+});
 
 app.listen(port, () => {
     console.log('Server is running');

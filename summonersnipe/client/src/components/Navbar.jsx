@@ -10,7 +10,7 @@ function Navbar(){
       const id = e.target.id;
       
       switch(id){
-        case 'home':
+          case 'home':
           navigate('/');
           break;
           case 'championAnalysis':
