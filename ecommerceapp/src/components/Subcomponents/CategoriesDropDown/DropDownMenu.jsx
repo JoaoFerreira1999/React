@@ -1,5 +1,10 @@
 import { DownOutlined } from '@ant-design/icons';
 import { Dropdown, Space } from 'antd';
+
+const brands = ["Brands","Ray-Ban","Persol","Oakley","Tom Ford","Carerra","Gucci","Vogue","Ana Hickman","Prada","Mormaii","Dior","Dolce & Gabana"];
+
+
+
 const items = [
   {
     key: '1',

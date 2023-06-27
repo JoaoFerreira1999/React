@@ -1,16 +1,36 @@
 .wrapper{
     height: 40vh;
-    width: 80vw;
+    width: 70vw;
     margin: 0 auto;
-    background-color: rgb(255, 251, 245);
+    background-color: rgb(255, 231, 231);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .main{
-    margin: auto;
-    width: 40%;
+    margin: 20px 0 0 140px;
+    text-align: left;
+    color: #073ea5;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .slogan{
     font-family: 'Kalam', cursive;
+}
 
+.img-div{
+    width: 50%;
+    margin-left: 10px;
+}
+
+.promo-div{
+    margin-top: 30px;
+    width: 50%;
+}
+
+.main img{
+    height: 354px;
+    max-height: 100%;
 }

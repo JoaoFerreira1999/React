@@ -22,6 +22,7 @@ select{
     background-color: inherit;
     border: none;
     color: white;
+    font-size: inherit;
 }
 
 select:first-of-type{

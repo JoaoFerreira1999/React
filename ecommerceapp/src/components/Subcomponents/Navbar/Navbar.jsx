@@ -2,6 +2,10 @@ import React from 'react'
 import classes from './Navbar.module.css'
 import Glasses from '../../../assets/glasses.png'
 import { Link } from 'react-router-dom';
+import { SearchOutlined } from '@ant-design/icons';
+import { Button} from 'antd'
+import DropDownMenu from '../CategoriesDropDown/DropDownMenu'
+ 
 
 const brands = ["Brands","Ray-Ban","Persol","Oakley","Tom Ford","Carerra","Gucci","Vogue","Ana Hickman","Prada","Mormaii","Dior","Dolce & Gabana"];
 
@@ -14,7 +18,7 @@ function Navbar() {
         <div><h4><Link to="/">Home</Link></h4></div>
         <div><h4><Link to="/shop">Shop</Link></h4></div>
         <div><h4>        
-          <select class={classes.brands}>
+          {/* <select class={classes.brands}>
             {
               brands.map((item) => {
                 if(item === "Brands"){
@@ -24,11 +28,14 @@ function Navbar() {
                 }
               })
             }
-          </select></h4></div>
+          </select> */}
+          <DropDownMenu />
+          </h4></div>
         <div><h4><Link to="/featured">Featured</Link></h4></div>
         <div><h4><Link to="/recommended">Recommended</Link></h4></div>
         <form action="" method="POST">
         <input type="text" placeholder="Looking for new glasses?"/>
+        <Button type="primary" shape="circle" icon={<SearchOutlined />} />
         </form>
       </nav>
     </>
