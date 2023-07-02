@@ -1,22 +1,17 @@
-.wrapper{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-}
-
 .main{
     margin: 20px auto 0 auto;
-    padding: 10px 20px 0 20px;
-    width: 65%;
+    padding: 0 auto;
+    max-width: 65%;
+    min-width: auto;
     height: 78%;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     overflow-y: scroll;
 }
+
 
 /* no scrollbar */
 .main::-webkit-scrollbar {

@@ -1,11 +1,12 @@
 .navbar{
     display: flex;
     padding: 5px;
-    margin: 10px 500px 20px 500px;
+    margin: 10px 200px 20px 200px;
     align-items: center;
     justify-content: space-evenly;
     min-width: auto;
-    border-bottom: solid;
+    border-bottom: solid rgb(240, 240, 240);
+    border-width: 1px;
     flex-wrap: wrap;
 }
 
@@ -25,7 +26,8 @@
     background-color: rgb(245, 245, 245);
     border: none;
     border-radius: 25px;
-
+    font-family: 'Kalam', cursive;
+    font-family: 'Montserrat', sans-serif;
 } 
 
 .navbar form > input[type="text"]:focus{
@@ -61,7 +63,16 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     text-align: center;
-  }
+}
+
+.form-div{
+    display: inline;
+}
+
+.dropdown:hover{
+    cursor: pointer;
+}
+
 
 @keyframes rotation {
     from {

@@ -13,7 +13,6 @@ function Shop() {
   );
 
   return (
-    <div class={classes.wrapper}>
       <main class={classes.main}>
         <Card /> 
         <Card />
@@ -26,8 +25,15 @@ function Shop() {
         <Card />
         <Card />
         <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </main>
-    </div>
   );
 }
 

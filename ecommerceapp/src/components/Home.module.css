@@ -1,19 +1,20 @@
 .wrapper{
-    height: 40vh;
+    height: 41vh;
     width: 70vw;
     margin: 0 auto;
     background-color: rgb(255, 231, 231);
-    display: flex;
     flex-wrap: wrap;
+    border-radius: 5px;
 }
 
 .main{
-    margin: 20px 0 0 140px;
+    margin: 15px 0 0 140px;
     text-align: left;
     color: #073ea5;
     font-size: 1.2rem;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2%;
 }
 
 .slogan{
@@ -31,6 +32,49 @@
 }
 
 .main img{
-    height: 354px;
+    margin-top: 9px;
+    height: 360px;
     max-height: 100%;
+}
+
+.filter-section{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: small;
+}
+
+.new-products select{
+
+}
+
+.dropdown-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-deals-container{
+    padding: 10px;
+    height: auto;
+}
+
+.dropdown{
+    padding: 10px;
+}
+
+.new-deals-div{
+    height: auto;
+    padding: 10px 100px 10px 100px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    
+}
+
+
+.new-deals-div::-webkit-scrollbar {
+    display: none;
 }

@@ -5,7 +5,7 @@
     color: white;
     display: flex;
     justify-content: space-between;
-    font-family: sans-serif;
+    align-items: center;
 }
 
 a{
@@ -23,6 +23,8 @@ select{
     border: none;
     color: white;
     font-size: inherit;
+    font-family: 'Kalam', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
 select:first-of-type{
@@ -40,4 +42,10 @@ select:first-of-type{
 
 .discount:last-of-type{
     margin-left: 20px;
+}
+
+.dropdown-section{
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
 }
