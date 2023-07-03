@@ -5,7 +5,7 @@ const handleChange = (value) => {
 const SortSelect = () => (
   <Space wrap>
     <Select
-      defaultValue="price"
+      defaultValue="Order By"
       style={{
         width: 120,
       }}

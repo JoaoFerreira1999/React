@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './Home.module.css'
 import Guccieyewerar from '../assets/modeloutdoor.png'
 import DropDownShape from './Subcomponents/DropDownMenus/DropDownShape'
+import ShapeSelect from './Subcomponents/Selects/ShapeSelect'
 import SortSelect from './Subcomponents/Selects/SortBySelect'
 import Card from './Subcomponents/Card/Card'
 import { ShoppingOutlined, FireOutlined } from '@ant-design/icons';
@@ -23,7 +24,7 @@ function Home() {
       </main>
       <div class={classes['filter-section']}>
         <div class={classes['dropdown-section']}>
-          <div class={classes.dropdown}><DropDownShape /></div>
+          <div class={classes.dropdown}><ShapeSelect /></div>
           <div class={classes.dropdown}><DropDownShape /></div>
           <div class={classes.dropdown}><DropDownShape /></div>
         </div>

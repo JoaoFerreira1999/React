@@ -31,10 +31,6 @@ select:first-of-type{
     margin-right: 5px;
 }
 
-.info select > option{
-    background-color: #364d79;
-    border: none;
-}
 
 .discount:first-of-type{
     margin-right: 20px;
