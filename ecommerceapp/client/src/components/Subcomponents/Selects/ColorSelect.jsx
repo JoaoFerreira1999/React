@@ -16,7 +16,7 @@ const ShapeSelect = () => (
   >
     <Space wrap>
         <Select
-        defaultValue="Shape"
+        defaultValue="Color"
         style={{
             width: 120,
         }}
@@ -24,37 +24,29 @@ const ShapeSelect = () => (
         listHeight={128}
         options={[
             {
-                value: 'aviator',
-                label: 'Aviator',
+                value: 'black',
+                label: 'Black',
             },
             {
-                value: 'butterfly',
-                label: 'Butterfly',
+                value: 'white',
+                label: 'White',
             },
             {
-                value: 'oval',
-                label: 'Oval',
+                value: 'yellow',
+                label: 'Yellow',
             },
             {
-                value: 'rectangle',
+                value: 'gray',
                 label: 'Rectangle',
             },
             {
-                value: 'round',
-                label: 'Round',
+                value: 'golden',
+                label: 'Golden',
             },
             {
-                value: 'square',
-                label: 'Square',
+                value: 'brown',
+                label: 'Brown',
             },
-            {
-                value: 'wayfarer',
-                label: 'Wayfarer',
-            },
-            {
-                value: 'sports',
-                label: 'Sports',
-            }
         ]}
         />
     </Space>

@@ -8,6 +8,7 @@
     border-bottom: solid rgb(240, 240, 240);
     border-width: 1px;
     flex-wrap: wrap;
+    font-size: 15px;
 }
 
 .navbar > div a{
@@ -21,7 +22,7 @@
 }
 
 .navbar form > input[type="text"]{
-    padding: 10px;
+    padding: 10px 15px;
     width: 300px;
     background-color: rgb(245, 245, 245);
     border: none;

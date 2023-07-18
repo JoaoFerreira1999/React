@@ -1,20 +1,32 @@
 import React from 'react'
 import classes from './Card.module.css'
+import Rating from '../Rating/Rating'
 
-function Card() {
+function Card(props) {
+
+  const brand = props.brand;
+  const price = props.price;
+  const color = props.color;
+  const shape = props.shape;
+  const stock = props.stock;
+  const imgURL = props.imgURL;
+  const rating = props.rating;
+  const size = props.size;
+
   return (
     <div class={classes.card}>
-        <img src="" alt="img"/>
-        <div class={classes.details}>        
-          <h2>Title</h2>
-          <h3>Price</h3>
+      <div class={classes['img-div']}>
+        <img src={imgURL} alt="img"/>
+      </div>
+        <div class={classes.detailspt1}>        
+          <h2>{brand}</h2>
+          <h2>{price}</h2>
         </div>
-        <h4>Brand</h4>
-        <h4>Descrição</h4>
-        <div>
-          <span></span>
+        <div class={classes.detailspt2}>
+        <h4>{brand}</h4>
+        <h4><Rating rating={rating}/></h4>
+        <button class={classes['addtocart-button']}>Add to Cart</button>
         </div>
-        <button>Add to Cart</button>
     </div>
   )
 }

@@ -45,3 +45,9 @@ select:first-of-type{
     justify-content: space-between;
     width: 220px;
 }
+
+@media screen and (max-width: 769px) {
+    .info{
+        display: none;
+    }
+  }

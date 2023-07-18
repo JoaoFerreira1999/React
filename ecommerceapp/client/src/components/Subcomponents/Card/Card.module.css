@@ -1,18 +1,55 @@
 .card{
     min-width: 280px;
+    max-width: 280px;
     height: auto;
     margin: 10px;
     align-items: center;
     padding: 20px;
     text-align: center;
-    border-radius: 15px;
     flex-basis: 19%;
-    background-color: #f2f2f2;
+    font-family: 'Kalam', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.details{
+.detailspt1{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+.detailspt2{
+    flex-direction: row;
+    text-align: start;
+}
+
+.img-div{
+    background-color: #f2f2f2;
+    border-radius: 7px;
+}
+
+.card img{
+    height: 150px;
+    width: 100%;
+    object-fit:cover;
+    mix-blend-mode: multiply;
+}
+
+.card h2{
+    font-size: 18px;
+}
+
+.card h4{
+    font-size: 15px;
+}
+
+.addtocart-button{
+    border-radius: 20px;
+    padding: 7px 15px;
+    background-color: white;
+    border: 2px solid black;
+}
+.addtocart-button:hover{
+    background-color: #073ea5;
+    color: white;
 }
