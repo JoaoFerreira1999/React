@@ -36,11 +36,11 @@
 }
 
 .card h2{
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .card h4{
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .addtocart-button{
@@ -52,4 +52,5 @@
 .addtocart-button:hover{
     background-color: #073ea5;
     color: white;
+    cursor: pointer;
 }

@@ -5,9 +5,6 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
 
-let brands = ["Brands","Ray-Ban","Persol","Oakley","Tom Ford","Carerra","Gucci","Vogue","Ana Hickman","Prada","Mormaii","Dior","Dolce & Gabana"];
-
-
 function Shop() {
 
   const [allProducts, setAllProducts] = useState([])
@@ -25,13 +22,18 @@ function Shop() {
       <main class={classes.main}>
         {
           allProducts.map((item) => {
+            const brand = item.brand.replace(/\s/g,'');
+            const color = item.color;
+            const shape = item.shape;
+            const imgURL1 = brand + "_" + color + "_" + shape;
+
             return <Card 
                 brand = {item.brand}
                 price = {item.price}
                 color = {item.color}
                 shape = {item.shape}
                 stock = {item.stock}
-                imgURL = {item.imgURL}
+                imgURL = {imgURL1}
                 rating = {item.rating}
                 size = {item.size} 
             />

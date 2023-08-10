@@ -47,6 +47,10 @@ const ShapeSelect = () => (
                 value: 'brown',
                 label: 'Brown',
             },
+            {
+                value: 'rouge',
+                label: 'Rouge',
+            }
         ]}
         />
     </Space>

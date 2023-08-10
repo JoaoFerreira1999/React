@@ -32,7 +32,7 @@ const items = [
   },
   {
     key: '8',
-    label: 'Ana Hickman',
+    label: 'Ana Hickmann',
   },
   {
     key: '9',
