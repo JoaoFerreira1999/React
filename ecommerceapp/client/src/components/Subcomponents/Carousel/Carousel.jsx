@@ -1,9 +1,7 @@
 import { Carousel } from 'antd';
-import diorGlasses from '../../../assets/diorglasses2.webp'
-
 
 const contentStyle = {
-  height: '260px',
+  height: 500,
   color: '#fff',
   lineHeight: '260px',
   textAlign: 'center',

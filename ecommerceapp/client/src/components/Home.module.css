@@ -46,10 +46,6 @@
     font-size: small;
 }
 
-.new-products select{
-
-}
-
 .dropdown-section{
     display: flex;
     justify-content: space-between;
@@ -66,7 +62,7 @@
 
 .new-deals-div{
     height: auto;
-    padding: 10px 100px 10px 100px;
+    padding: 10px 30px 10px 30px;
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;

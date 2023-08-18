@@ -1,10 +1,10 @@
 .card{
-    min-width: 280px;
-    max-width: 280px;
-    height: auto;
+    min-width: 330px;
+    max-width: auto;
     margin: 10px;
+    margin-bottom: 50px;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     flex-basis: 19%;
     font-family: 'Kalam', cursive;
@@ -16,6 +16,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    text-align: left;
 }
 
 .detailspt2{
@@ -29,14 +30,13 @@
 }
 
 .card img{
-    height: 150px;
+    height: 300px;
     width: 100%;
-    object-fit:cover;
-    mix-blend-mode: multiply;
+    object-fit:contain;
 }
 
 .card h2{
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .card h4{

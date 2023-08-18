@@ -28,6 +28,7 @@ function Shop() {
             const imgURL1 = brand + "_" + color + "_" + shape;
 
             return <Card 
+                title = {item.title}
                 brand = {item.brand}
                 price = {item.price}
                 color = {item.color}

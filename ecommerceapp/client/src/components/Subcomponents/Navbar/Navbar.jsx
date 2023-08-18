@@ -7,7 +7,6 @@ import { Button} from 'antd'
 import { DropDownBrands } from '../DropDownMenus/DropDownBrands'
  
 function Navbar() {
-
   const location = useLocation();
 
   return (
@@ -27,7 +26,7 @@ function Navbar() {
             <Button type="primary" shape="circle" style={{background: "#073ea5"}} icon={<SearchOutlined />} />
           </form>
         </div>
-        <div class={classes['account-div']}><h4><Link><UserOutlined style={{ fontSize: '25px'}}/> Account</Link></h4></div>
+        <div class={classes['account-div']}><h4><Link to="/register"><UserOutlined style={{ fontSize: '25px'}}/> Account</Link></h4></div>
         <div class={classes['cart-div']}><h4><Link><ShoppingCartOutlined style={{ fontSize: '25px'}} /> Cart</Link></h4></div>
       </nav>
     </>

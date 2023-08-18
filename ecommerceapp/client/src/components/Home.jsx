@@ -50,13 +50,19 @@ function Home() {
         <div class={classes['new-deals-div']}>
           {
             hotDeals.map((item) => {
+              const brand = item.brand.replace(/\s/g,'');
+              const color = item.color;
+              const shape = item.shape;
+              const imgURL1 = brand + "_" + color + "_" + shape;
+
               return <Card 
+                title = {item.title}
                 brand = {item.brand}
                 price = {item.price}
                 color = {item.color}
                 shape = {item.shape}
                 stock = {item.stock}
-                imgURL = {item.imgURL}
+                imgURL = {imgURL1}
                 rating = {item.rating}
                 size = {item.size} 
               />
