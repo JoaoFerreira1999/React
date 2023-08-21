@@ -33,6 +33,10 @@ app.get('/shop', async (req, res) =>{
     res.send(hotDeals);
 });
 
+app.post('/register', (req, res) => {
+    console.log(req.body);
+})
+
 
 mongoose.connection.once('open', () => {
     console.log('Connected to MongoDB');

@@ -29,6 +29,7 @@ function Card(props) {
   const rating = props.rating;
   const size = props.size;
   const title = props.title;
+  const numberofReviews = props.numberofReviews;
 
   let img;
 
@@ -82,7 +83,7 @@ function Card(props) {
           </div>
           <div class={classes.detailspt2}>
           <h4>{brand}</h4>
-          <h4><Rating rating={rating}/></h4>
+          <h4><Rating rating={rating}/> ({numberofReviews})</h4>
           <Button type="primary" style={{backgroundColor: "#073ea5"}} icon={<ShoppingCartOutlined />}>
             Add to cart!
           </Button>

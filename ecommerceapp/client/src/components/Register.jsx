@@ -9,7 +9,7 @@ function Register() {
     <div className={classes.wrapper}>
       <main class={classes["main-wrapper"]}>
         <div class={classes["field-div1"]}>
-          <form class={classes["form-div"]}>
+          <form action='http://localhost:3000/register' method='POST' class={classes["form-div"]}>
             <section>
               <h1>Welcome to GlassShop!</h1>
               <p>Please register and keep up with the news</p>
@@ -18,7 +18,7 @@ function Register() {
             <span>Name: <p></p><input type="text" placeholder='Name'/></span>
             <span>Email: <p></p><input type="email" placeholder='Email' /></span>
             <span>Password: <p></p><input type="password" placeholder='Password'/></span>
-            <button type='submit'>Register</button>
+            <button type='submit' class={classes['submit-button']}>Register</button>
           </form>
           <div class={classes["options-div"]}>
             <Link to="/">Go Back</Link>
@@ -26,6 +26,7 @@ function Register() {
           </div>
         </div>
         <div class={classes["field-div2"]}>
+          <h1>We take care of your eyes!</h1>
           <img src={model} class={classes.model} alt=""/>
         </div>
       </main>

@@ -27,7 +27,7 @@ function Home() {
       <main class={classes.main}>
         <div class={classes["promo-div"]}>
           <h1>Grab Up To 50% Off On The Selected SunGlasses</h1>
-          <Button type="primary" shape="round" style={{ background: "#073ea5", height: "50px", width:"120px", margin:"40px 0 0 0"}} icon={<ShoppingOutlined />}>
+          <Button type="primary" shape="round" style={{ background: "#073ea5", height: "50px", width:"120px", margin:"40px 0 0 0", fontFamily: 'Kalam'}} icon={<ShoppingOutlined />}>
             Buy Now
           </Button>
         </div>
@@ -65,6 +65,7 @@ function Home() {
                 imgURL = {imgURL1}
                 rating = {item.rating}
                 size = {item.size} 
+                numberofReviews = {item.numberofReviews}
               />
             })
           }

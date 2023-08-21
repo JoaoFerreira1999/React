@@ -6,6 +6,8 @@
     align-items: center;
 
     animation: fadeInAnimation ease 2s;
+
+    font-family: 'Montserrat', sans-serif;
 }
 
 @keyframes fadeInAnimation {
@@ -37,6 +39,11 @@
 .field-div2{
     width: 60%;
     justify-content: center;
+}
+
+.field-div2 h1{
+    position: absolute;
+    top: 50%;
 }
 
 .field-div1{
@@ -79,6 +86,10 @@
     outline: none;
 }
 
+input:focus::placeholder {
+    color: transparent;
+}
+
 .model{
     height: 100%;
     object-fit: contain;
@@ -89,4 +100,8 @@
     flex-direction: row;
     justify-content: space-between;
     width: 60%;
+}
+
+.submit-button{
+    padding: 10px;
 }

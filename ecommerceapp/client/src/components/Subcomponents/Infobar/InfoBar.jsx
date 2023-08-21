@@ -10,7 +10,7 @@ const locations = ["Europe West", "North America", "Europe East", "Russia", "Asi
 function InfoBar() {
   return (
     <p class={classes.info}>
-        <span class={classes.phone}>9494949532 <PhoneOutlined /></span>
+        <span class={classes.phone}>949 494 953 <PhoneOutlined /></span>
         <span><span class={classes.discount}>Get 50% Off On Your First Buy</span> | <span class={classes.discount}><Link to="/shop">Shop Now</Link></span></span>
         <span class={classes['dropdown-section']}>
             <LocationSelect />
