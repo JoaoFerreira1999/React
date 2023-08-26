@@ -38,12 +38,18 @@
 
 .field-div2{
     width: 60%;
+    position: relative;
     justify-content: center;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
 .field-div2 h1{
     position: absolute;
-    top: 50%;
+    left: 50px;
+    width: 25%;
+    line-height: 100px;
 }
 
 .field-div1{
@@ -104,4 +110,12 @@ input:focus::placeholder {
 
 .submit-button{
     padding: 10px;
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+.submit-button:hover{
+    cursor: pointer;
+    background-color: rgb(117, 117, 117);
 }

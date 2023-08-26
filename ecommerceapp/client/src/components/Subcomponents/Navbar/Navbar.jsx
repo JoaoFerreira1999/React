@@ -5,9 +5,11 @@ import { Link, useLocation } from 'react-router-dom';
 import { SearchOutlined, UserOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 import { Button} from 'antd'
 import { DropDownBrands } from '../DropDownMenus/DropDownBrands'
+import { useSelector } from 'react-redux';
  
 function Navbar() {
   const location = useLocation();
+  const userInfo = useSelector((state) => state.user.user[0]);
 
   return (
     <>
@@ -26,7 +28,7 @@ function Navbar() {
             <Button type="primary" shape="circle" style={{background: "#073ea5"}} icon={<SearchOutlined />} />
           </form>
         </div>
-        <div class={classes['account-div']}><h4><Link to="/register"><UserOutlined style={{ fontSize: '25px'}}/> Account</Link></h4></div>
+        <div class={classes['account-div']}><h4><Link to="/register"><UserOutlined style={{ fontSize: '25px'}}/> {userInfo ? userInfo : "Account"}</Link></h4></div>
         <div class={classes['cart-div']}><h4><Link><ShoppingCartOutlined style={{ fontSize: '25px'}} /> Cart</Link></h4></div>
       </nav>
     </>
