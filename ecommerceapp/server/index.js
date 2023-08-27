@@ -78,7 +78,7 @@ app.post('/register', async (req, res) => {
 
                 res.json({
                     auth: true,
-                    token: token,
+                    token: accessToken,
                     details: registeredDetails,
                 });
             }
@@ -86,6 +86,40 @@ app.post('/register', async (req, res) => {
     })
 });
 
+app.post('/login', async(req, res) => {
+    const email = req.body.email;
+    const password = req.body.password;
+
+    const queryResult = await userModel.find({ email: email}).exec();
+
+    console.log(queryResult[0]);
+
+    if(queryResult[0] !== null) {
+        const hashedPassword = queryResult[0].password;
+        
+
+        bcrypt.compare(password, hashedPassword).then(result => {
+            if(result == true) {
+                const loginDetails = [queryResult[0].email, queryResult[0].password]
+
+                const accessToken = jwt.sign({email}, process.env.JWT_SECRET, {
+                    expiresIn: 300,
+                });
+
+                res.json({
+                    auth: true,
+                    token: accessToken,
+                    details: loginDetails,
+                });
+
+            } else {
+                res.json({
+                    message: "Passwords do not match!"
+                })
+            }
+        })
+    }
+});
 
 const verifyJWT = (req, res, next) => {
     const token = req.headers["authorization"];

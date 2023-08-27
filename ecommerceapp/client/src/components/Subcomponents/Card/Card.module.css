@@ -26,6 +26,7 @@
 .img-div{
     background-color: #f2f2f2;
     border-radius: 7px;
+    position: relative;
 }
 
 .card img{
@@ -52,4 +53,17 @@
     background-color: #073ea5;
     color: white;
     cursor: pointer;
+}
+
+.favorite-icon{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    background-color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -32,7 +32,6 @@ function Home() {
           </Button>
         </div>
         <div class={classes["img-div"]}>
-          <img src={Guccieyewerar} alt="promo"/>
         </div>
       </main>
       <div class={classes['filter-section']}>

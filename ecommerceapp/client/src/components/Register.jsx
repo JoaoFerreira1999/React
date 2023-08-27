@@ -80,7 +80,6 @@ function Register() {
         </div>
         <div class={classes["field-div2"]}>
           <h1>We take care of your eyes!</h1>
-          <img src={model} class={classes.model} alt=""/>
         </div>
       </main>
     </div>

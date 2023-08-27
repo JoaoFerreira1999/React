@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classes from './Card.module.css'
 import Rating from '../Rating/Rating'
-import { SearchOutlined, ShoppingCartOutlined } from '@ant-design/icons';
+import { SearchOutlined, ShoppingCartOutlined, HeartOutlined, HeartFilled  } from '@ant-design/icons';
 import { Button } from 'antd';
 
 import {
@@ -19,6 +19,16 @@ import {
 } from '../../../assets/index'
 
 function Card(props) {
+
+  const [favorite, setFavorite] = useState(false);
+
+  const favoriteToggle = () => {
+    if(favorite === false) {
+      setFavorite(true);
+    } else {
+      setFavorite(false);
+    }
+  } 
 
   const brand = props.brand;
   const price = props.price;
@@ -73,12 +83,12 @@ function Card(props) {
 
   return (
     <div class={classes.card}>
-      <a href="">
         <div class={classes['img-div']}>
+          <span class={classes['favorite-icon']} onClick={favoriteToggle}>{favorite === false ? <HeartOutlined /> : <HeartFilled style={{ color: 'red'}}/>}</span>
           <img src={img} alt="img"/>
         </div>
           <div class={classes.detailspt1}>        
-            <h2>{title}</h2>
+            <a href=""><h2>{title}</h2></a>
             <h2>{price}</h2>
           </div>
           <div class={classes.detailspt2}>
@@ -88,7 +98,6 @@ function Card(props) {
             Add to cart!
           </Button>
           </div>
-      </a>
     </div>
   )
 }
